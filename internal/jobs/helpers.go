@@ -30,7 +30,7 @@ func getHermesWorkspaceDirs() []string {
 	if val := config.GetString("WORKSPACE_DIR", ""); val != "" {
 		dirs = append(dirs, val)
 	}
-	// Default fallback path di STB
+	// Default fallback path for persistent storage
 	dirs = append(dirs, "/media/devmon/docker-disk/hermes-data/workspace")
 	return dirs
 }

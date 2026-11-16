@@ -1,6 +1,6 @@
-# ⏱️ Cron STB
+# ⏱️ Cron Scheduler Daemon
 
-**Cron STB** is an ultra-lightweight, standalone cron scheduler and Discord notification daemon engineered in **Golang** for 24/7 operation on low-resource devices (Armbian TV boxes / STB, Raspberry Pi, CasaOS, and low-memory VPS).
+**Cron Scheduler Daemon** is an ultra-lightweight, standalone cron scheduler and Discord notification daemon engineered in **Golang** for 24/7 continuous operation on Linux servers, low-memory VPS, and Docker containers.
 
 It automates two primary workflows in a single self-contained binary:
 
@@ -53,14 +53,14 @@ It automates two primary workflows in a single self-contained binary:
 
 ## 🛠️ System Requirements
 
-- **Docker &amp; Docker Compose** (recommended for 24/7 Armbian STB / CasaOS / Raspberry Pi deployment) **or**
+- **Docker &amp; Docker Compose** (recommended for 24/7 server / container deployment) **or**
 - **Go 1.25+** (for bare-metal execution)
 
 ---
 
 ## 🚀 Quick Start
 
-### Option 1: Docker Compose (Recommended for STB / CasaOS)
+### Option 1: Docker Compose (Recommended for Production)
 
 Prebuilt multi-arch images (`linux/amd64` &amp; `linux/arm64`) are published to `ghcr.io/nothingser0/cron-stb:latest`.
 
@@ -76,7 +76,7 @@ Prebuilt multi-arch images (`linux/amd64` &amp; `linux/arm64`) are published to 
    ```
 
     Place your Google OAuth `credentials.json` and `token.json` inside `./data/`.
-3. **Pull prebuilt image &amp; start in background** *(saves STB CPU &amp; RAM)*:
+3. **Pull prebuilt image &amp; start in background** *(saves host CPU &amp; RAM)*:
    ```bash
     docker compose pull
     docker compose up -d
